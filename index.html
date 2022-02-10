@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Progress Tracker</title>
+
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h1>progress tracker</h1>
+    </nav>
+
+    <section class="form-section">
+      <div class="wrapper">
+        <div class="progress-content">
+          <p>Progress</p>
+          <p><span class="progress-value">0</span>%</p>
+        </div>
+        <div class="container">
+          <div class="progress-container"></div>
+        </div>
+      </div>
+      <form action="">
+        <input
+          type="text"
+          name="task-input"
+          id="task-input"
+          placeholder="Enter task"
+        />
+        <select name="" id="">
+          <option selected disabled>Select</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button class="btn">Add</button>
+      </form>
+    </section>
+
+    <section class="task-list">
+      <div class="list-item">
+        <input type="checkbox" class="list-item-checkbox" id="1" />
+        <p class="list-item-text">Buy groceries</p>
+        <small class="list-item-level hard">Hard</small>
+      </div>
+      <div class="list-item">
+        <input type="checkbox" class="list-item-checkbox" id="1" />
+        <p class="list-item-text">Buy groceries</p>
+        <small class="list-item-level medium">Medium</small>
+      </div>
+      <div class="list-item">
+        <input type="checkbox" class="list-item-checkbox" id="1" />
+        <p class="list-item-text">Buy groceries</p>
+        <small class="list-item-level low">Low</small>
+      </div>
+    </section>
+  </body>
+</html>
