@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Progress Tracker</title>
-
+    <link rel="shortcut icon" type="image/jpg" href="./images/hourglass.png" />
     <script defer src="./script.js"></script>
   </head>
   <body>
@@ -30,10 +30,11 @@
           name="task-input"
           id="task-input"
           placeholder="Enter task"
+          autocomplete="off"
         />
-        <select name="" id="">
+        <select name="" id="hardness-level">
           <option selected disabled>Select</option>
-          <option value="low">Low</option>
+          <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
@@ -41,22 +42,14 @@
       </form>
     </section>
 
-    <section class="task-list">
+    <section class="task-list"></section>
+
+    <template>
       <div class="list-item">
         <input type="checkbox" class="list-item-checkbox" id="1" />
         <p class="list-item-text">Buy groceries</p>
         <small class="list-item-level hard">Hard</small>
       </div>
-      <div class="list-item">
-        <input type="checkbox" class="list-item-checkbox" id="1" />
-        <p class="list-item-text">Buy groceries</p>
-        <small class="list-item-level medium">Medium</small>
-      </div>
-      <div class="list-item">
-        <input type="checkbox" class="list-item-checkbox" id="1" />
-        <p class="list-item-text">Buy groceries</p>
-        <small class="list-item-level low">Low</small>
-      </div>
-    </section>
+    </template>
   </body>
 </html>

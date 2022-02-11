@@ -44,7 +44,7 @@ nav {
 .progress-container {
   width: 0%;
   height: 100%;
-  background: #333333;
+  background: #356ab8;
   transition: all 1s;
 }
 
@@ -53,6 +53,7 @@ form {
   border: 2px solid #333;
   border-radius: 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 400px;
 }
@@ -89,7 +90,13 @@ select {
 .list-item {
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-left: 5px solid #356ab8;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .list-item-checkbox {
@@ -110,9 +117,14 @@ select {
   background-position: center;
 }
 
+.list-item-checkbox:checked ~ .list-item-text {
+  text-decoration: line-through;
+  color: #c7c8ca;
+}
+
 .list-item-text {
   flex-grow: 2;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .list-item-level {
@@ -120,6 +132,7 @@ select {
   font-size: 10px;
   border-radius: 8px;
   color: #ffffff;
+  text-transform: capitalize;
 }
 
 .hard {
@@ -130,11 +143,37 @@ select {
   background: #4ebfd4;
 }
 
-.low {
+.easy {
   background: #a1bac7;
 }
 
 @media (max-width: 414px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #task-input {
+    margin-bottom: 10px;
+    display: block;
+    flex-basis: 100%;
+  }
+
+  .task-list {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
   .wrapper {
     width: 100%;
   }
