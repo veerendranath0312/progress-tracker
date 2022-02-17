@@ -95,6 +95,7 @@ const markAsComplete = function (e) {
   }
 }
 
+inputEl.focus()
 form.addEventListener('submit', addTask)
 taskList.addEventListener('click', markAsComplete)
 
